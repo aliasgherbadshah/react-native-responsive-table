@@ -2,15 +2,17 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
 
-    table_containe: {
-        justifyContent: "space-evenly",
-        flexDirection: "row",
-        flex: 1,
-        width: "100%"
+    table_containe: {    
+        width: "100%",
+        height:"50%",
+    },   
+    header_text_container:{
+        height:50,
+        justifyContent:"center",
+        alignItems:"center"
     },
     column_style: {
         backgroundColor: "#EFEFEF",
-        // justifyContent: "center",
         alignItems: "center"
     },
     header_text: {

@@ -107,8 +107,17 @@ it gives you full power to design the row cantaine inside table view so that you
 
 > **It's recommended to use percentage value at setting heights and width of elements to make your component responsive accross multiple devices**
 
+by default table view adjust itself in available width but you cn also make it horizontal scrollable by playing with following properties.
+
+## Properties
+
+ name            | description                    | type | default
+:--------------- |:------------------------------ |:-------- |:--------
+ horizontalScroll | to enable the horizontal scroll within table  | Boolean | false
+ columnWidth   | Set the width of column (only works when horizontalScroll is enabled)| Number | 50
+ headerHeight   | to set the height of header on table   | Number | 50
+ 
 ## **TO DO :-**
-- make table vertical scrollable if its to long to fit in single view.
 - make table container style adjustable
 - insert customs style to headers and rows
 
