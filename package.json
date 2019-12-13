@@ -1,7 +1,7 @@
 {
   "name": "react-native-responsive-table",
-  "version": "1.0.1",
-  "description": "Provide table view for react native",
+  "version": "1.0.3",
+  "description": "React Native Responsive Table provide the responsive data table view in both android and IOS.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,11 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-
-    table_containe: {    
-        width: "100%",
-        height:"50%",
-    },   
+     
     header_text_container:{
         height:50,
         justifyContent:"center",
@@ -34,5 +30,8 @@ export default StyleSheet.create({
     row_text: {
         color:"#858383",
         fontSize:12
+    },
+    disable_horizontal_scroll:{
+        width:"100%"
     }
 })

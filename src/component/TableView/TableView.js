@@ -10,19 +10,34 @@ export default class TableView extends Component {
         column_width: 0
     }
     componentDidMount() {
+
+        if (this.props.width && /^\d+(\.\d+)?%$/.test(this.props.width)) {
+            this.props.width = screenWidth + parseInt(this.props.width) / 100
+        } else {
+            this.props.width = parseInt(this.props.width)
+        }
+
+        if (this.props.height && /^\d+(\.\d+)?%$/.test(this.props.height)) {
+            this.props.height = screenHeight + parseInt(this.props.height) / 100
+        } else {
+            this.props.height = parseInt(this.props.height)
+        }
+
         if (this.props.horizontalScroll) {
             this.setState({ column_width: this.props.columnWidth || 50 })
         } else {
-            this.setState({ column_width: screenWidth * (100 / this.props.headers.length) / 100 })
+            this.setState({ column_width: this.props.width || screenWidth * (100 / this.props.headers.length) / 100 })
         }
     }
     render() {
         return (
             <>
-
-                <View style={{ ...styles.table_containe }}>
+                <View style={{
+                    width: this.props.width || screenWidth,
+                    height: this.props.height || screenHeight * 50 / 100,
+                }}>
                     <ScrollView bounces={false}>
-                        <ScrollView bounces={false} horizontal contentContainerStyle={{ ...styles.horizontal_scroll_container }}>
+                        <ScrollView bounces={false} horizontal contentContainerStyle={this.props.horizontalScroll ? {} : styles.disable_horizontal_scroll}>
                             {
                                 this.props.headers.map((data) => {
                                     return (

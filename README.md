@@ -29,7 +29,7 @@ import {TableView} from "react-native-responsive-table"
         },
         {
             name:"Name",
-            reference_key:"no",
+            reference_key:"name",
         },
         {
             name:"Age",
@@ -113,6 +113,8 @@ by default table view adjust itself in available width but you cn also make it h
 
  name            | description                    | type | default
 :--------------- |:------------------------------ |:-------- |:--------
+ width   |  it set the width of table view (by defaul it is off full width of the device)  | Number & Percent | device width (100%)
+  height   | it set the height of table view (by defaul it is off 50% of the device)  | Number & Percent | 50% (device height)
  horizontalScroll | to enable the horizontal scroll within table  | Boolean | false
  columnWidth   | Set the width of column (only works when horizontalScroll is enabled)| Number | 50
  headerHeight   | to set the height of header on table   | Number | 50
